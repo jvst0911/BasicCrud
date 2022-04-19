@@ -31,9 +31,20 @@ Para resolver este tipo de conflito é necessário uma intervenção manual, alt
 - git push
 
 # Como usar branches
-
+- git checkout
+Com este comando você pode navegar entre ramificações preexistentes de seu repositório.
+- git branch 
+Este comando exibe uma lista de todas as branches (ramificações) existentes em seu reposítório, em seguida pode-se utilizar o git checkout para "entrar" na branch escolhida.
 
 # Como encontrar bugs (git diff, git log, git bisect, git blame)
+- git-diff
+Exibe as mudanças entre os commits, o commit, a árvore de trabalho, etc
+- git log
+Para ver o histórico de commits, com informações tais como SHA1, autor, data e descrição, você pode usar este comando
+- git-bisect
+Utilize a pesquisa binária para localizar o commit que introduziu um bug
+- git-blame
+Mostra qual revisão e autor modificou por último cada linha de um arquivo
 
 # Como escolher determinados commits
 
