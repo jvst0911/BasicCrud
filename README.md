@@ -47,4 +47,5 @@ Utilize a pesquisa binária para localizar o commit que introduziu um bug
 Mostra qual revisão e autor modificou por último cada linha de um arquivo
 
 # Como escolher determinados commits
-
+- git cherry-pick
+O git cherry pick é um comando que permite ao usuário selecionar commits específicos para trazer à branch desejado.

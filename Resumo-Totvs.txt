@@ -1,0 +1,78 @@
+Equipe: Eduardo Augusto Ferreira, João Vitor Tomio 
+
+Atividade avaliativa n1
+
+Escrever um resumo com os pontos interessantes da palestra da TOTVS sobre agilidade
+
+Setor: Fluig, Área dos envolvidos na palestra: Área de governança 
+
+“Agile coach que tem o treinamento e repassa para as áreas”
+
+Em Dezembro de 2016 ocorreu a implementação de squads e aplicação do scrum (manifesto ágil)
+
+A partir deste momento começou as:
+Cerimônias ágil/pequenas entregas
+Pequenas entregas para diminuir o risco (ágil) e maior interações com o cliente, diferente do modelo cascata (antigo), onde o cliente só tem visibilidade no fim do processo.
+
+Estrutura ágil e escalável 
+
+Foram criadas as:
+Tribes
+Squads
+Chapter e guildas - guilda assunto em comum 
+
+Tamanho do SQUAD de 8 a 14 pessoas 
+Dentro dos squads cada um possui: 
+Líder
+Agile master (para remover os impedimentos)
+PO - cuida do negócio (Dono do produto)
+E claro, os Devs
+
+São realizadas reuniões semanais para boas práticas e melhorias. 
+
+Em todo o processo são usados:
+Scrum - framework 
+Kanban - método (evita gargalo)
+Adaptado (scrum + kanban)
+Utilizados no fluig
+Estimativa por pontos e horas
+Burndown (gráfico) - kanban 
+Wip - work in progress (Define limite de atividades em progresso)
+Todo o processo ágil é baseado no Scrum guide (guia de explicação)
+Por dentro do ágil:
+Daily - reunião diária 
+O que eu fiz ontem 
+O que eu vou fazer hoje para atender a sprint
+Todo team dev participa, PO e Agile Master (facilitador)
+
+Kaban meeting (O que falta para concluir (atividade) olhando mais para a tarefa no quadro) 
+Reabastecimento:
+Fluxo contínuo, reabastecimento das tarefas no quadro visando wip
+(Se tenho menos de 3 itens no to do)
+Do processo de reabastecimento participam: Dev team PO e agile master. 
+
+Review apresentar entregar para o stake holder 
+(PO) contato com cliente 
+A cada duas semanas 
+
+Feedback contínuo, focado em melhoria contínua com o dev team
+dia a dia
+Backlog
+Refinamento do negócio com o PO (O que precisa ser feito?)
+Refinamento de negócio concluído 
+Refinamento técnico (dev team) como será feito?
+
+Critérios*
+To do
+Desenvolvimento 
+Pronto para teste 
+Em teste 
+Teste concluído 
+Documentação 
+Pronto para expelir
+Concluído 
+
+Itens para estudo:
+Design thinking e lean inception 
+Ágil - comunicação e colaboração
+
