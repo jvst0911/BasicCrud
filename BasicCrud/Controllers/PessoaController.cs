@@ -1,6 +1,8 @@
-﻿using BasicCrud.Entities;
-using BasicCrud.Repository.Interface;
+﻿using BasicCrud.Core.Entities;
+using BasicCrud.Core.Entities.Mock;
+using BasicCrud.Helpers;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace BasicCrud.Controllers
 {
@@ -8,70 +10,42 @@ namespace BasicCrud.Controllers
     [Route("[controller]")]
     public class PessoaController : ControllerBase
     {
-        private readonly IPessoaRepository _pessoaRepository;
-
-        public PessoaController(IPessoaRepository personRepository)
+        [HttpGet]
+        public ActionResult GetAll()
         {
-            _pessoaRepository = personRepository;
+            var pessoas = PessoaMock._pessoas.Select(x => x);
+            if (pessoas.Count() > 0)
+                return Ok(pessoas);
+            else
+                return NoContent();
+        }
+        [HttpGet("{cpf}")]
+        public ActionResult GetByCpf([FromRoute] string cpf)
+        {
+            var pessoa = PessoaMock._pessoas.Where(x => Utils.DeixaNumeros(x.CPF) == Utils.DeixaNumeros(cpf)).FirstOrDefault();
+            if (pessoa != null || pessoa != default)
+                return Ok(pessoa);
+            else
+                return NoContent();
         }
         [HttpPost]
         public ActionResult Post(Pessoa person)
         {
-            var post = _pessoaRepository.Insert(person);
-            if (post > 0)
+            PessoaMock._pessoas.Add(person);
+            return Ok();
+        }
+        [HttpDelete("{cpf}")]
+        public ActionResult Delete([FromRoute] string cpf)
+        {
+            var pessoa = PessoaMock._pessoas.Where(x => Utils.DeixaNumeros(x.CPF) == Utils.DeixaNumeros(cpf)).FirstOrDefault();
+
+            if (pessoa != null || pessoa != default)
             {
+                PessoaMock._pessoas.Remove(pessoa);
                 return Ok();
             }
             else
-            {
-                return NotFound();
-            }
-        }
-        [HttpGet]
-        public ActionResult GetAll()
-        {
-            var get = _pessoaRepository.GetAll();
-            if (get != null)
-            {
-                return Ok(get);
-            }
-            else
-            {
-                return NotFound();
-            }
-
-        }
-        [HttpGet("{id}")]
-        public ActionResult GetById([FromRoute] int id)
-        {
-            var get = _pessoaRepository.GetById(id);
-            if (get != null)
-            {
-                return Ok(get);
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
-        [HttpDelete("{id}")]
-        public ActionResult Delete([FromRoute] int id)
-        {
-            var del = _pessoaRepository.Delete(id);
-            if (del == 1)
-            {
-                return Ok(del);
-            }
-            else
-            {
-                return BadRequest("salah NIK atau nik tidak ditemukan");
-            }
-        }
-        [HttpPut]
-        public ActionResult Put(Pessoa person)
-        {
-            var get = _pessoaRepository.Update(person);
-            return Ok(get);
+                return BadRequest();
         }
     }
 }

@@ -1,20 +1,9 @@
-using BasicCrud.Context;
-using BasicCrud.Repository;
-using BasicCrud.Repository.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BasicCrud
 {
@@ -36,10 +25,6 @@ namespace BasicCrud
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BasicCrud", Version = "v1" });
             });
-
-
-            services.AddScoped<IPessoaRepository, PessoaRepository>();
-            services.AddDbContext<BasicCrudContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BasicCrudDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
