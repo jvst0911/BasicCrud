@@ -49,3 +49,26 @@ Mostra qual revisão e autor modificou por último cada linha de um arquivo
 # Como escolher determinados commits
 - git cherry-pick
 O git cherry pick é um comando que permite ao usuário selecionar commits específicos para trazer à branch desejado.
+
+# Como instalar o Stryker para realizar testes de mutação
+
+## Versões utilizadas:
+- Dotnet 6.0;
+- xUnit 2.4.1;
+- xUnit.Runner.VisualStudio 2.4.5
+- dotnet-stryker 2.0
+
+## Passo a passo de como foi feito:
+- Foi acessada a pasta de testes
+```sh
+cd ./BasicCrud.Test/
+```
+- Executado os seguintes comandos no cmd
+```sh
+dotnet new tool-manifest
+dotnet tool install dotnet-stryker
+dotnet stryker
+```
+## Documentação
+Para a documentação completa em como usar o Stryker.NET, veja a [documentação](https://stryker-mutator.io/docs/stryker-net/Configuration)
+
