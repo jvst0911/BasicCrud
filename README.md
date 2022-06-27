@@ -69,6 +69,10 @@ dotnet new tool-manifest
 dotnet tool install dotnet-stryker
 dotnet stryker
 ```
+
+## Resultado dos testes:
+![Resultado dos testes de mutação](./result.png "Resultado dos testes de mutação")
+
 ## Documentação
 Para a documentação completa em como usar o Stryker.NET, veja a [documentação](https://stryker-mutator.io/docs/stryker-net/Configuration)
 
